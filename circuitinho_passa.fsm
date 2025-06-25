@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fsm>
+  <states>
+    <state>
+      <values></values>
+      <position x="600.0" y="-180.0"/>
+      <number>0</number>
+      <name>A</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values></values>
+      <position x="780.0" y="60.0"/>
+      <number>1</number>
+      <name>B</name>
+      <radius>70</radius>
+      <isInitial>false</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+    <state>
+      <values></values>
+      <position x="480.0" y="60.0"/>
+      <number>2</number>
+      <name>C</name>
+      <radius>70</radius>
+      <isInitial>true</isInitial>
+      <initialAngle>12</initialAngle>
+      <defaultDC>false</defaultDC>
+    </state>
+  </states>
+  <transitions>
+    <transition>
+      <values>PASSA = 0</values>
+      <position x="492.74295" y="-83.62853"/>
+      <fromState reference="../../../states/state[3]"/>
+      <toState reference="../../../states/state"/>
+      <condition>OVF</condition>
+    </transition>
+    <transition>
+      <values>PASSA = 0</values>
+      <position x="735.1197" y="-93.83975"/>
+      <fromState reference="../../../states/state"/>
+      <toState reference="../../../states/state[2]"/>
+      <condition>!OVF</condition>
+    </transition>
+    <transition>
+      <values>PASSA =1</values>
+      <position x="630.0" y="116.39586"/>
+      <fromState reference="../../../states/state[2]"/>
+      <toState reference="../../../states/state[3]"/>
+      <condition>OVF</condition>
+    </transition>
+  </transitions>
+</fsm>
